@@ -1,5 +1,7 @@
 # DynamoUi
 
+This project is a front-end for [dynamo](https://github.com/coderkan/dynamo) backend.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.5.
 
 ## Development server
