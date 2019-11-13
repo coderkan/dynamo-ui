@@ -43,4 +43,9 @@ export class R2formComponent implements OnInit {
     this.lineArray.push({'type': 'label', 'text': 'Label Added'});
   }
 
+  onSave(save: any){
+    debugger;
+    console.log("Saved: " + save);
+  }
+  
 }

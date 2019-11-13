@@ -1,7 +1,7 @@
 <p>r2form works!</p>
 <div class="container">
     <div class="row" >
-        <app-element *ngFor="let item of lineArray" [obj]="item"></app-element>
+        <app-element *ngFor="let item of lineArray" [obj]="item" (onsave)="onSave($event)"></app-element>
     </div>
     <button class="btn btn-success" (click)="addButton()">Button Ekle</button>
     <button class="btn btn-warning" (click)="addLabel()">Label Ekle</button>

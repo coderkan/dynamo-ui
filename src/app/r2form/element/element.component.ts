@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-element',
@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ElementComponent implements OnInit {
 
   @Input('obj') baseObj:any;
+  @Output() onsave = new EventEmitter();
 
   constructor() { }
 
@@ -25,5 +26,11 @@ export class ElementComponent implements OnInit {
       return true;
     return false;
   }
+
+  onSaved(t: any){
+    this.onsave.emit(t);
+  }
+
+
 
 }
