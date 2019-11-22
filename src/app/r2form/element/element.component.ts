@@ -20,12 +20,12 @@ export class ElementComponent implements OnInit {
       return true;
     return false;
   }
-
+ 
   isLabel(){
     if(this.baseObj.type=='label')
       return true;
     return false;
-  }
+  } 
 
   onSaved(t: any){
     this.onsave.emit(t);

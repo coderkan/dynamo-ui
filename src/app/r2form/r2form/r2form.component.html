@@ -1,8 +1,40 @@
-<p>r2form works!</p>
-<div class="container">
-    <div class="row" >
-        <app-element *ngFor="let item of lineArray" [obj]="item" (onsave)="onSave($event)"></app-element>
+<div class="p-grid" *ngFor="let line of matrisArray; let colIndex = index;" style="margin-top: 8px;">
+    <div class="p-col-11" style="border: 2px solid gray; border-radius: 12px;">
+        <app-element *ngFor="let item of line" [obj]="item" (onsave)="onSave($event)"></app-element>
     </div>
-    <button class="btn btn-success" (click)="addButton()">Button Ekle</button>
-    <button class="btn btn-warning" (click)="addLabel()">Label Ekle</button>
+    <div class="p-col-1">
+        <p-button icon="pi pi-plus" iconPos="right" label="Add" (click)="addItem(colIndex)"></p-button>
+    </div>
 </div>
+<div class="p-grid" style="margin-top: 5px;">
+    <div class="p-col-1">
+        <p-button icon="pi pi-plus" iconPos="right" label="Add" (click)="addNewLine()"></p-button>
+    </div>
+</div>
+
+<button type="text" pButton label="Basic" (click)="op.toggle($event)"></button>
+
+<p-overlayPanel #op [showCloseIcon]="true" [dismissable]="false" styleClass="ui-lg-4 ui-md-12 ui-sm-12">
+    <div class="ui-g ui-fluid">
+        <div class="ui-g-12">
+            <div class="ui-g-4">
+                <label for="vin">Vin</label>
+            </div>
+            <div class="ui-g-8">
+                <p-dropdown id="xy" [options]="cities2" [(ngModel)]="selectedCity2" optionLabel="name"></p-dropdown>
+            </div>
+        </div>
+    </div>
+    <div class="p-grid">
+        <div class="p-col-6">
+            Tip:
+        </div>
+        <div class="p-col-6">
+            <label for="xy">
+                Tip:
+                <p-dropdown id="xy" [options]="cities2" [(ngModel)]="selectedCity2" optionLabel="name"></p-dropdown>
+            </label>
+
+        </div>
+    </div>
+</p-overlayPanel>

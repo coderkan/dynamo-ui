@@ -1,5 +1,3 @@
-<button class="btn btn-primary" *ngIf="isButton()" (click)="onSaved(baseObj)">
-{{ baseObj.text }}
-</button>
+<p-button styleClass="ui-button-info" *ngIf="isButton()" (click)="onSaved(baseObj)" label="{{ baseObj.text }}">  
+</p-button>
 <label *ngIf="isLabel()">{{ baseObj.text }}</label>
-
