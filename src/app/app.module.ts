@@ -11,12 +11,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {TableModule} from 'primeng/table';
 import {DropdownModule} from 'primeng/dropdown';
 import {InputTextModule} from 'primeng/inputtext';
+import { CompositeComponent } from './r2form/composite/composite.component';
+ 
+import {ToastModule} from 'primeng/toast';
 
 @NgModule({
   declarations: [
     AppComponent,
     R2formComponent,
-    ElementComponent
+    ElementComponent,
+    CompositeComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +31,8 @@ import {InputTextModule} from 'primeng/inputtext';
     DropdownModule,
     FormsModule,
     InputTextModule,
+ 
+    ToastModule,
     ReactiveFormsModule
   ],
   providers: [],

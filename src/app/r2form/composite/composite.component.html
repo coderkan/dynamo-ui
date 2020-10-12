@@ -1,0 +1,25 @@
+<p-toast [style]="{marginTop: '5px'}" position="top-right" key="tl"></p-toast>
+<div class="ui-g ui-fluid">
+    <div class="ui-g-3">
+        <p-dropdown id="xy" [options]="definitions" [(ngModel)]="selectedDefinition" optionLabel="name"></p-dropdown>
+    </div>
+    <div class="ui-g-3">    
+            <p-button icon="pi pi-plus" iconPos="right" label="Add" (click)="addComposite()"></p-button>
+    <!--
+            <p-button label="Save" (click)="saveComposite()" class="ml"></p-button>
+    -->
+            <p-button label="Clear" (click)="clearComposite()" class="ml"></p-button>
+    </div>
+    <p>Composite Hierarchy</p>
+    <p>{{totalComposite}}</p>
+
+</div>
+<div class="ui-g ui-fluid" *ngFor="let item of tempDefs">
+    <div class="ui-g-3" >
+        <label>{{item.name}}</label>
+    </div>
+</div>
+<!--
+    <p-messages [(value)]="msgs"></p-messages>
+-->
+
